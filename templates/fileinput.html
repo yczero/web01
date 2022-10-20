@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %} test page{%  endblock %}
+{% block content %}
+
+<br>
+<h2 class="text-center"> 파일 업로드 </h2>
+<div class="container">
+    <form action = "/fileupload" method = "post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="name" class="form-label"> name </label>
+          <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp">
+          <div id="nameHelp" class="form-text">이름은 한글로.</div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+        <div class="mb-3">
+          <label for="pass" class="form-label">Password</label>
+          <input type="password" class="form-control" id="pass" name="pass">
+        </div>
+        <!-- <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Default file input example</label>
+            <input class="form-control" type="file" id="formFile" name = "formFile">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+{% endblock %}

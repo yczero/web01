@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} test page{%  endblock %}
+{% block content %}
+<div class="container">
+ <br>
+    {% for key, value in data1.items()  %}
+     {{ key }} 는 {{ value }} 입니다.
+     <br>
+    {% endfor %}
+
+    <br>    
+    전송방식은 {{data2}} 
+</div>
+{% endblock %}
